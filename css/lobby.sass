@@ -363,11 +363,10 @@ main
                 display: none
         .function_btn
             position: fixed
-            +size(100%,auto)
+            +size(100%,100vh)
             margin: 43px 0 0 0
             background-color: #000
             display: none
-            height: 100%
             ul
                 text-align: center
                 padding: 15px 20px
@@ -436,6 +435,7 @@ main
                     border-top: 1.5px dashed $green
             &.show_menu
                 display: block
+                overflow-y: auto
     main
         height: 100vh
         nav

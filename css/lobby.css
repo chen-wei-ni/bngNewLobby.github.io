@@ -3,7 +3,8 @@
   padding: 0;
   box-sizing: border-box;
   font-size: 14px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 img {
@@ -97,7 +98,8 @@ aside .personal_info .mb_right_side .dollars .add::after {
   width: 8px;
   height: 1px;
 }
-aside .personal_info .mb_right_side .dollars .add::before, aside .personal_info .mb_right_side .dollars .add::after {
+aside .personal_info .mb_right_side .dollars .add::before,
+aside .personal_info .mb_right_side .dollars .add::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -252,7 +254,8 @@ main .all_games .each_game p {
   color: #fff;
   text-align: center;
 }
-main .all_games .each_game::before, main .all_games .each_game::after {
+main .all_games .each_game::before,
+main .all_games .each_game::after {
   content: "";
   position: absolute;
   z-index: 5;
@@ -273,7 +276,8 @@ main .all_games .each_game::after {
   border-bottom: 3px solid #4eeb90;
   border-right: 3px solid #4eeb90;
 }
-main .all_games .each_game:hover::before, main .all_games .each_game:hover::after {
+main .all_games .each_game:hover::before,
+main .all_games .each_game:hover::after {
   width: calc(100% + 3px);
   height: calc(100% + 3px);
   opacity: 1;
@@ -443,11 +447,10 @@ main .all_games .each_game:hover::before, main .all_games .each_game:hover::afte
   aside .function_btn {
     position: fixed;
     width: 100%;
-    height: auto;
+    height: 100vh;
     margin: 43px 0 0 0;
     background-color: #000;
     display: none;
-    height: 100%;
   }
   aside .function_btn ul {
     text-align: center;
@@ -479,7 +482,8 @@ main .all_games .each_game:hover::before, main .all_games .each_game:hover::afte
   aside .function_btn ul li .sub_menu_list ul li span.selected {
     color: #4eeb90;
   }
-  aside .function_btn ul li .sub_menu_list.opened, aside .function_btn ul li .sub_menu_list.active {
+  aside .function_btn ul li .sub_menu_list.opened,
+  aside .function_btn ul li .sub_menu_list.active {
     display: block;
   }
   aside .function_btn ul li a {
@@ -497,7 +501,8 @@ main .all_games .each_game:hover::before, main .all_games .each_game:hover::afte
     position: static;
     cursor: pointer;
   }
-  aside .function_btn ul li.change .current_language, aside .function_btn ul li.change .current_currency {
+  aside .function_btn ul li.change .current_language,
+  aside .function_btn ul li.change .current_currency {
     display: none;
   }
   aside .function_btn ul li.change span {
@@ -533,6 +538,7 @@ main .all_games .each_game:hover::before, main .all_games .each_game:hover::afte
   }
   aside .function_btn.show_menu {
     display: block;
+    overflow-y: auto;
   }
   main {
     height: 100vh;
@@ -572,7 +578,8 @@ main .all_games .each_game:hover::before, main .all_games .each_game:hover::afte
     height: 3px;
     background-color: #101010;
   }
-  main nav .mb_menu::before, main nav .mb_menu::after {
+  main nav .mb_menu::before,
+  main nav .mb_menu::after {
     content: "";
     position: absolute;
     left: 50%;
@@ -682,4 +689,4 @@ main .all_games .each_game:hover::before, main .all_games .each_game:hover::afte
   100% {
     filter: brightness(80%);
   }
-}/*# sourceMappingURL=lobby.css.map */
+}
