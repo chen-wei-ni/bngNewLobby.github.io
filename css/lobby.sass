@@ -351,25 +351,29 @@ main
         +size(100%,auto)
         background-color: $asideColor
         .personal_info
+            position: sticky
+            top: 0
             display: flex
             justify-content: space-between
+            padding-bottom: 10px
             .logo
                 margin: 0
-                padding: 10px
+                width: 150px
             .dashedline
                 display: none
         .function_btn
             position: fixed
             +size(100%,auto)
-            margin: 50px 0 0 0
+            margin: 43px 0 0 0
             background-color: #000
             display: none
+            height: 100%
             ul
                 text-align: center
                 padding: 15px 20px
                 li
                     color: #fff
-                    font-size: 16px
+                    font-size: 18px
                     margin: 20px 0
                     .sub_menu_list
                         margin: 10px 0
@@ -389,6 +393,8 @@ main
                                         color: $green
                         &.opened,&.active
                             display: block
+                    a
+                        font-size: 18px
                     &.currency
                         .sub_menu_list
                             ul
@@ -424,11 +430,13 @@ main
                 display: block
     main
         nav
-            top: 75px
+            top: 65px
             ul
                 width: 100%
                 justify-content: space-around
                 padding-left: 5px
+                overflow-x: auto
+                -webkit-overflow-scrolling: touch
                 li
                     margin: 0
                 span
@@ -461,28 +469,22 @@ main
                     top: 50%
                 &::after
                     top: 70%
-
         .all_games
             height: 92vh
-            padding-right: 10px
+            padding-right: 0px
             margin: 135px 10px 0 10px
-            grid-template-columns: repeat(auto-fit, minmax(200px,1fr))
             grid-column-gap: 8px
             grid-row-gap: 15px
             .each_game
                 margin: 0
-
+            &::-webkit-scrollbar
+                display: none
 @media screen and ( max-width: 414px )
     aside
         padding: 8px 0
         .personal_info
-            position: sticky
-            top: 0
             .logo
-                padding: 12px 0 0 10px
-                width: 160px
         .function_btn
-            height: 100%
             .films
                 margin: 10px
                 div
@@ -493,7 +495,6 @@ main
                         width: 100%
             ul
                 li
-                    font-size: 18px
                     padding: 5px 0
                     .sub_menu_list
                     &.currency
@@ -502,17 +503,15 @@ main
                                 li
                                     span
                                         width: 90px
-                    a
-                        font-size: 18px
+
     main
         nav
+            top: 85px
             height: 42px
             background-color: #101010
             ul
                 justify-content: start
                 margin: 0 10px 0 10px
-                overflow-x: auto
-                -webkit-overflow-scrolling: touch
                 li
                     text-align: center
                     margin: 0 15px
@@ -533,12 +532,7 @@ main
                     +size(25px,2px)
                     top: 65%
         .all_games
-            grid-template-columns: repeat(auto-fit, minmax(140px,1fr))
             grid-column-gap: 10px
-            grid-row-gap: 15px
-            padding-right: 0
-            &::-webkit-scrollbar
-                display: none
 @media screen and ( min-width:768px  )
     aside
         .function_btn
