@@ -28,7 +28,7 @@ a {
 }
 
 aside {
-  width: 240px;
+  width: 270px;
   height: 100vh;
   background-color: #101010;
   z-index: 10;
@@ -162,13 +162,19 @@ aside .function_btn .films {
   align-items: center;
 }
 
+main {
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  background: url("../images/topics_bg.jpg") no-repeat;
+  background-size: cover;
+}
+
 nav {
   width: 100%;
   height: 50px;
   display: flex;
   justify-content: center;
-  position: fixed;
-  top: 0;
   background-color: rgba(16, 16, 16, 0.7);
 }
 nav ul {
@@ -191,37 +197,29 @@ nav ul li span.selected {
   border-bottom: 1px solid #4eeb90;
 }
 
-main {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  background: url("../images/topics_bg.jpg") no-repeat;
-  background-size: cover;
-}
-main .all_games {
-  height: 100vh;
-  padding-bottom: 85px;
-  padding-right: 20px;
+.all_games {
+  height: 94vh;
+  padding: 10px;
   display: grid;
   grid-column-gap: 25px;
   grid-row-gap: 30px;
-  grid-template-columns: repeat(auto-fit, 295px);
+  grid-template-columns: repeat(auto-fit, minmax(290px, 300px));
   align-content: start;
-  margin: 70px 20px 0 280px;
+  margin: 0 auto;
+  margin-left: 30px;
   overflow-y: auto;
 }
-main .all_games::-webkit-scrollbar-track {
+.all_games::-webkit-scrollbar-track {
   background-color: rgba(255, 255, 255, 0.4235294118);
 }
-main .all_games::-webkit-scrollbar {
+.all_games::-webkit-scrollbar {
   background-color: rgba(0, 0, 0, 0.4235294118);
   width: 10px;
 }
-main .all_games::-webkit-scrollbar-thumb {
+.all_games::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.3);
 }
-main .all_games .each_game {
+.all_games .each_game {
   position: relative;
   display: grid;
   justify-content: center;
@@ -229,11 +227,11 @@ main .all_games .each_game {
   padding: 10px;
   cursor: pointer;
 }
-main .all_games .each_game .tags {
+.all_games .each_game .tags {
   position: absolute;
   top: 5%;
 }
-main .all_games .each_game .tags span {
+.all_games .each_game .tags span {
   display: block;
   padding: 0 10px;
   border: 1px solid rgba(255, 255, 255, 0.5);
@@ -241,21 +239,21 @@ main .all_games .each_game .tags span {
   margin: 5px 0;
   animation: tag 1.8s infinite linear;
 }
-main .all_games .each_game .tags span.hot_label {
+.all_games .each_game .tags span.hot_label {
   background-color: red;
 }
-main .all_games .each_game .tags span.new_label {
+.all_games .each_game .tags span.new_label {
   background-color: #0090ff;
 }
-main .all_games .each_game.show_game {
+.all_games .each_game.show_game {
   animation: show 300ms forwards;
 }
-main .all_games .each_game p {
+.all_games .each_game p {
   color: #fff;
   text-align: center;
 }
-main .all_games .each_game::before,
-main .all_games .each_game::after {
+.all_games .each_game::before,
+.all_games .each_game::after {
   content: "";
   position: absolute;
   z-index: 5;
@@ -264,20 +262,20 @@ main .all_games .each_game::after {
   transition: 0.4s ease-in-out;
   opacity: 0;
 }
-main .all_games .each_game::before {
+.all_games .each_game::before {
   top: -3px;
   left: -3px;
   border-top: 3px solid #4eeb90;
   border-left: 3px solid #4eeb90;
 }
-main .all_games .each_game::after {
+.all_games .each_game::after {
   right: -3px;
   bottom: -3px;
   border-bottom: 3px solid #4eeb90;
   border-right: 3px solid #4eeb90;
 }
-main .all_games .each_game:hover::before,
-main .all_games .each_game:hover::after {
+.all_games .each_game:hover::before,
+.all_games .each_game:hover::after {
   width: calc(100% + 3px);
   height: calc(100% + 3px);
   opacity: 1;
@@ -409,30 +407,35 @@ main .all_games .each_game:hover::after {
     grid-template-columns: repeat(auto-fit, 18%);
   }
 }
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1400px) {
   main .all_games {
+    margin-left: 0;
     grid-column-gap: 16px;
     justify-content: space-evenly;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
   }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1100px) {
   main nav {
     justify-content: flex-end;
   }
   main .all_games {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media screen and (max-width: 767px) {
+  .wrapper {
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+  }
   aside {
     width: 100%;
     height: auto;
     background-color: #202020;
+    overflow: unset;
   }
   aside .personal_info {
-    position: sticky;
-    top: 0;
     display: flex;
     justify-content: space-between;
     padding-bottom: 10px;
@@ -448,7 +451,8 @@ main .all_games .each_game:hover::after {
     position: fixed;
     width: 100%;
     height: 90vh;
-    margin: 43px 0 0 0;
+    padding-bottom: 30px;
+    margin: 50px 0 0 0;
     background-color: #000;
     display: none;
   }
@@ -543,21 +547,19 @@ main .all_games .each_game:hover::after {
   aside .function_btn.show_menu::-webkit-scrollbar {
     display: none;
   }
-  main {
-    height: 100vh;
-  }
   main nav {
-    top: 65px;
+    background-color: #101010;
   }
   main nav ul {
     width: 100%;
-    justify-content: space-around;
+    justify-content: start;
+    margin: 0 10px 0 10px;
     padding-left: 5px;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
   main nav ul li {
-    margin: 0;
+    margin: 0 15px;
   }
   main nav ul span {
     white-space: nowrap;
@@ -598,9 +600,10 @@ main .all_games .each_game:hover::after {
     top: 70%;
   }
   main .all_games {
-    height: 92vh;
-    padding-right: 0px;
-    margin: 135px 10px 0 10px;
+    height: 88vh;
+    padding: 0 10px 10px 10px;
+    margin: 10px 0 0 0;
+    grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 8px;
     grid-row-gap: 15px;
   }
@@ -609,59 +612,6 @@ main .all_games .each_game:hover::after {
   }
   main .all_games::-webkit-scrollbar {
     display: none;
-  }
-}
-@media screen and (max-width: 414px) {
-  aside {
-    padding: 8px 0;
-  }
-  aside .function_btn ul li {
-    padding: 5px 0;
-  }
-  aside .function_btn ul li.currency .sub_menu_list ul li span {
-    width: 90px;
-  }
-  main nav {
-    top: 85px;
-    height: 42px;
-    background-color: #101010;
-  }
-  main nav ul {
-    justify-content: start;
-    margin: 0 10px 0 10px;
-  }
-  main nav ul li {
-    text-align: center;
-    margin: 0 15px;
-  }
-  main nav ul li span {
-    display: inline-block;
-    font-size: 16px;
-  }
-  main nav ul li span.selected {
-    border: none;
-  }
-  main nav .mb_menu {
-    width: 42px;
-    height: 42px;
-  }
-  main nav .mb_menu span {
-    width: 25px;
-    height: 2px;
-    top: 25%;
-  }
-  main nav .mb_menu::before {
-    width: 25px;
-    height: 2px;
-    top: 45%;
-  }
-  main nav .mb_menu::after {
-    width: 25px;
-    height: 2px;
-    top: 65%;
-  }
-  main .all_games {
-    grid-column-gap: 10px;
   }
 }
 @media screen and (min-width: 768px) {
