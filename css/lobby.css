@@ -425,6 +425,9 @@ main .all_games .each_game:hover::after {
   }
 }
 @media screen and (max-width: 767px) {
+  .wrapper {
+    flex-direction: column;
+  }
   aside {
     width: 100%;
     height: auto;
@@ -540,6 +543,9 @@ main .all_games .each_game:hover::after {
   aside .function_btn.show_menu {
     display: block;
   }
+  main {
+    position: static;
+  }
   main nav {
     top: 65px;
   }
@@ -594,7 +600,7 @@ main .all_games .each_game:hover::after {
   main .all_games {
     height: 92vh;
     padding-right: 0px;
-    margin: 135px 10px 0 10px;
+    margin: 50px 10px 0 10px;
     grid-column-gap: 8px;
     grid-row-gap: 15px;
   }
