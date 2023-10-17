@@ -363,7 +363,7 @@ main
                 display: none
         .function_btn
             position: fixed
-            +size(100%,100vh)
+            +size(100%,90vh)
             margin: 43px 0 0 0
             background-color: #000
             display: none
@@ -436,6 +436,8 @@ main
             &.show_menu
                 display: block
                 overflow-y: auto
+                &::-webkit-scrollbar
+                    display: none
     main
         height: 100vh
         nav

@@ -447,7 +447,7 @@ main .all_games .each_game:hover::after {
   aside .function_btn {
     position: fixed;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     margin: 43px 0 0 0;
     background-color: #000;
     display: none;
@@ -539,6 +539,9 @@ main .all_games .each_game:hover::after {
   aside .function_btn.show_menu {
     display: block;
     overflow-y: auto;
+  }
+  aside .function_btn.show_menu::-webkit-scrollbar {
+    display: none;
   }
   main {
     height: 100vh;
