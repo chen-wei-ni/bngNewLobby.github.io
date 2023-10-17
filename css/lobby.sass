@@ -163,10 +163,11 @@ main
     .all_games
         height: 100vh
         padding-bottom: 85px
+        padding-right: 20px
         display: grid
         grid-column-gap: 25px
         grid-row-gap: 30px
-        grid-template-columns: repeat(auto-fit, 300px)
+        grid-template-columns: repeat(auto-fit, 295px)
         align-content: start
         // justify-content: space-evenly
         margin: 70px 20px 0 280px
@@ -277,6 +278,7 @@ main
                 cursor: pointer
                 &.ok_btn
                     background-color: $green
+                    color: #000
                 &.close_btn
                     background-color: $lineColor
                     color: $fontColor
@@ -462,6 +464,7 @@ main
 
         .all_games
             height: 92vh
+            padding-right: 10px
             margin: 135px 10px 0 10px
             grid-template-columns: repeat(auto-fit, minmax(200px,1fr))
             grid-column-gap: 8px
@@ -471,13 +474,15 @@ main
 
 @media screen and ( max-width: 414px )
     aside
-        padding: 5px 0
+        padding: 8px 0
         .personal_info
+            position: sticky
+            top: 0
             .logo
                 padding: 12px 0 0 10px
                 width: 160px
         .function_btn
-            margin: 52px 0 0 0
+            height: 100%
             .films
                 margin: 10px
                 div
@@ -488,6 +493,8 @@ main
                         width: 100%
             ul
                 li
+                    font-size: 18px
+                    padding: 5px 0
                     .sub_menu_list
                     &.currency
                         .sub_menu_list
@@ -495,13 +502,16 @@ main
                                 li
                                     span
                                         width: 90px
+                    a
+                        font-size: 18px
     main
         nav
             height: 42px
+            background-color: #101010
             ul
                 justify-content: start
                 margin: 0 10px 0 10px
-                overflow: auto
+                overflow-x: auto
                 -webkit-overflow-scrolling: touch
                 li
                     text-align: center
@@ -526,6 +536,7 @@ main
             grid-template-columns: repeat(auto-fit, minmax(140px,1fr))
             grid-column-gap: 10px
             grid-row-gap: 15px
+            padding-right: 0
             &::-webkit-scrollbar
                 display: none
 @media screen and ( min-width:768px  )

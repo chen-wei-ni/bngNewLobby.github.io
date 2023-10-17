@@ -124,7 +124,7 @@ body {
   height: auto;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
   .loginPage .logo {
     margin: 20px auto;
   }
