@@ -347,8 +347,6 @@ main
         .all_games
             grid-template-columns: repeat(2,1fr)
 @media screen and ( max-width: 767px )
-    .wrapper
-        flex-direction: column
     aside
         +size(100%,auto)
         background-color: $asideColor
@@ -439,7 +437,7 @@ main
             &.show_menu
                 display: block
     main
-        position: static
+        height: 100vh
         nav
             top: 65px
             ul
@@ -483,7 +481,7 @@ main
         .all_games
             height: 92vh
             padding-right: 0px
-            margin: 50px 10px 0 10px
+            margin: 135px 10px 0 10px
             grid-column-gap: 8px
             grid-row-gap: 15px
             .each_game
