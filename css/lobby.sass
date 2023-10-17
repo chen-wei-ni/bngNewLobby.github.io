@@ -399,9 +399,10 @@ main
                         .sub_menu_list
                             ul
                                 li
+                                    width: 33%
                                     span
                                         display: block
-                                        width: 120px
+                                        width: 100%
                                         margin: 10px 0
                     &.change
                         position: static
@@ -418,6 +419,13 @@ main
                 flex-direction: row
                 position: relative
                 padding: 15px 0 10px 0
+                margin: 10px
+                div
+                    &.video1
+                        margin-right: 5px
+                    iframe
+                        width: 100%
+                        height: 100%
                 &::before
                     content: ""
                     display: block
@@ -485,14 +493,6 @@ main
         .personal_info
             .logo
         .function_btn
-            .films
-                margin: 10px
-                div
-                    &.video1
-                        margin-right: 5px
-
-                    iframe
-                        width: 100%
             ul
                 li
                     padding: 5px 0
