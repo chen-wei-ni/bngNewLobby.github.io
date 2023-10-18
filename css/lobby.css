@@ -428,6 +428,7 @@ nav ul li span.selected {
     flex-direction: column;
     height: 100vh;
     overflow: hidden;
+    position: fixed;
   }
   aside {
     width: 100%;
@@ -547,6 +548,9 @@ nav ul li span.selected {
   aside .function_btn.show_menu::-webkit-scrollbar {
     display: none;
   }
+  main {
+    overflow: hidden;
+  }
   main nav {
     background-color: #101010;
   }
@@ -600,7 +604,7 @@ nav ul li span.selected {
     top: 70%;
   }
   main .all_games {
-    height: 88vh;
+    height: 82vh;
     padding: 0 10px 10px 10px;
     margin: 10px 0 0 0;
     grid-template-columns: repeat(2, 1fr);
@@ -612,6 +616,11 @@ nav ul li span.selected {
   }
   main .all_games::-webkit-scrollbar {
     display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  main .all_games {
+    height: 80vh;
   }
 }
 @media screen and (min-width: 768px) {
