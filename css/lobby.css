@@ -600,8 +600,8 @@ nav ul li span.selected {
     top: 70%;
   }
   main .all_games {
-    height: 82vh;
-    padding: 0 10px 10px 10px;
+    height: 85vh;
+    padding: 0 10px 25px 10px;
     margin: 10px 0 0 0;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 8px;
@@ -614,9 +614,9 @@ nav ul li span.selected {
     display: none;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-height: 760px) and (max-width: 414px) {
   main .all_games {
-    height: 80vh;
+    height: 82vh;
   }
 }
 @media screen and (min-width: 768px) {
