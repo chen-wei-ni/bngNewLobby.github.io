@@ -3,7 +3,8 @@
   padding: 0;
   box-sizing: border-box;
   font-size: 14px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 img {
@@ -98,7 +99,8 @@ aside .personal_info .mb_right_side .dollars .add::after {
   width: 8px;
   height: 1px;
 }
-aside .personal_info .mb_right_side .dollars .add::before, aside .personal_info .mb_right_side .dollars .add::after {
+aside .personal_info .mb_right_side .dollars .add::before,
+aside .personal_info .mb_right_side .dollars .add::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -155,6 +157,13 @@ aside .function_btn ul li span {
 aside .function_btn ul li:hover {
   color: #fff;
 }
+aside .function_btn .dashedline {
+  width: 90%;
+  height: 10px;
+  margin: 0 auto 20px auto;
+  display: block;
+  border-bottom: 2px dashed #3c3c3c;
+}
 aside .function_btn .films {
   display: flex;
   flex-direction: column;
@@ -197,7 +206,7 @@ nav ul li span.selected {
 }
 
 .all_games {
-  height: 93vh;
+  height: calc(100vh - 50px);
   padding: 10px;
   display: grid;
   grid-column-gap: 25px;
@@ -253,7 +262,8 @@ nav ul li span.selected {
   color: #fff;
   text-align: center;
 }
-.all_games .each_game::before, .all_games .each_game::after {
+.all_games .each_game::before,
+.all_games .each_game::after {
   content: "";
   position: absolute;
   z-index: 5;
@@ -274,7 +284,8 @@ nav ul li span.selected {
   border-bottom: 3px solid #4eeb90;
   border-right: 3px solid #4eeb90;
 }
-.all_games .each_game:hover::before, .all_games .each_game:hover::after {
+.all_games .each_game:hover::before,
+.all_games .each_game:hover::after {
   width: calc(100% + 3px);
   height: calc(100% + 3px);
   opacity: 1;
@@ -486,7 +497,8 @@ nav ul li span.selected {
   aside .function_btn ul li .sub_menu_list ul li span.selected {
     color: #4eeb90;
   }
-  aside .function_btn ul li .sub_menu_list.opened, aside .function_btn ul li .sub_menu_list.active {
+  aside .function_btn ul li .sub_menu_list.opened,
+  aside .function_btn ul li .sub_menu_list.active {
     display: block;
   }
   aside .function_btn ul li a {
@@ -504,7 +516,8 @@ nav ul li span.selected {
     position: static;
     cursor: pointer;
   }
-  aside .function_btn ul li.change .current_language, aside .function_btn ul li.change .current_currency {
+  aside .function_btn ul li.change .current_language,
+  aside .function_btn ul li.change .current_currency {
     display: none;
   }
   aside .function_btn ul li.change span {
@@ -513,6 +526,9 @@ nav ul li span.selected {
   }
   aside .function_btn ul li::before {
     display: none;
+  }
+  aside .function_btn .dashedline {
+    border-bottom: 1px dashed #4eeb90;
   }
   aside .function_btn .films {
     justify-content: center;
@@ -527,16 +543,6 @@ nav ul li span.selected {
   aside .function_btn .films div iframe {
     width: 100%;
     height: 100%;
-  }
-  aside .function_btn .films::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    margin: 0 auto;
-    width: 90%;
-    height: 5px;
-    border-top: 1.5px dashed #4eeb90;
   }
   aside .function_btn.show_menu {
     display: block;
@@ -584,7 +590,8 @@ nav ul li span.selected {
     height: 3px;
     background-color: #101010;
   }
-  main nav .mb_menu::before, main nav .mb_menu::after {
+  main nav .mb_menu::before,
+  main nav .mb_menu::after {
     content: "";
     position: absolute;
     left: 50%;
@@ -600,8 +607,8 @@ nav ul li span.selected {
     top: 70%;
   }
   main .all_games {
-    height: 85vh;
-    padding: 0 10px 25px 10px;
+    height: calc(100vh - 110px);
+    padding: 0 10px 35px 10px;
     margin: 10px 0 0 0;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 8px;
@@ -612,11 +619,6 @@ nav ul li span.selected {
   }
   main .all_games::-webkit-scrollbar {
     display: none;
-  }
-}
-@media screen and (max-height: 760px) and (max-width: 414px) {
-  main .all_games {
-    height: 82vh;
   }
 }
 @media screen and (min-width: 768px) {
@@ -647,4 +649,4 @@ nav ul li span.selected {
   100% {
     filter: brightness(80%);
   }
-}/*# sourceMappingURL=lobby.css.map */
+}
